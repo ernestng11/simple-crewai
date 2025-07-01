@@ -1,0 +1,32 @@
+market_research_task:
+  description: >
+    Conduct comprehensive market research for {customer_domain} and {project_description}.
+    Use web scraping and search tools to gather competitor data, industry news, market trends,
+    and relevant business intelligence. Focus on identifying market opportunities, competitive
+    landscape, and key industry developments from 2024.
+  expected_output: >
+    A detailed market research report including competitor analysis, market size estimates,
+    industry trends, key players, and strategic opportunities. Include data sources and
+    specific findings that can inform business development decisions.
+
+data_analysis_task:
+  description: >
+    Analyze the market research data and create financial models for {project_description}.
+    Use code execution tools to calculate TAM (Total Addressable Market), growth projections,
+    ROI scenarios, and other relevant business metrics. Build data models that support
+    strategic decision-making.
+  expected_output: >
+    A comprehensive data analysis report with financial models, TAM calculations, growth
+    projections, ROI scenarios, and key performance indicators. Include code, calculations,
+    visualizations, and clear methodology for all models created.
+
+strategy_validation_task:
+  description: >
+    Validate the market research findings and data analysis for {project_description}.
+    Cross-check assumptions, evaluate strategy coherence, score clarity and feasibility
+    on a scale of 0-1. Ask follow-up questions to identify gaps or inconsistencies.
+    Ensure all recommendations meet quality standards with scores above 0.8.
+  expected_output: >
+    A strategy validation report with clarity scores, assumption verification, gap analysis,
+    follow-up questions, and quality assessment. Include specific recommendations for
+    improvement if any scores fall below 0.8, and final approval or rejection of the strategy.
