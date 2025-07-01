@@ -11,7 +11,8 @@ poetry install
 ## Usage
 
 ```bash
-poetry shell
+poetry env actiavte
+poetry run bd_crew
 ```
 
 ## Configuration Files
