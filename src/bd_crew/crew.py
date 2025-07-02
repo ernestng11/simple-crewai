@@ -61,6 +61,15 @@ class BdCrew():
 			memory=False,
 		)
 
+	# Manager agent for hierarchical process (not included in agents list)
+	def project_manager(self) -> Agent:
+		return Agent(
+			config=self.agents_config['project_manager'],
+			tools=[],  # Manager agent should not have tools
+			verbose=True,
+			memory=False,
+		)
+
 	@task
 	def market_research_task(self) -> Task:
 		return Task(
@@ -89,11 +98,11 @@ class BdCrew():
 
 	@crew
 	def crew(self) -> Crew:
-		"""Creates the BD crew"""
+		"""Creates the BD crew with hierarchical process"""
 		return Crew(
 			agents=self.agents, # Automatically created by the @agent decorator
 			tasks=self.tasks, # Automatically created by the @task decorator
-			process=Process.sequential,
+			process=Process.hierarchical,
+			manager_agent=self.project_manager(),  # Designate manager for hierarchical process
 			verbose=True,
-			# process=Process.hierarchical, # In case you wanna use that instead https://docs.crewai.com/how-to/Hierarchical/
 		)
